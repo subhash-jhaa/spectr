@@ -6,7 +6,6 @@ import { cn, SectionLabel, fadeUp } from './Primitives';
 import { FEATURES } from './Constants';
 import { LiveGlobeCard } from './LiveGlobeCard';
 import { CobeGlobe } from '@/components/cobe-globe';
-import { Check } from 'lucide-react';
 
 export function Features() {
   return (
@@ -83,7 +82,7 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
 
 function FeatureContent({ feature }: { feature: Feature }) {
   switch (feature.variant) {
-    case 'realtime': return <RealtimeFeature feature={feature} />;
+    case 'realtime': return <RealtimeFeature />;
     case 'privacy': return <PrivacyFeature feature={feature} />;
     case 'dashboard': return <DashboardFeature feature={feature} />;
     case 'presence': return <PresenceFeature feature={feature} />;
@@ -91,7 +90,7 @@ function FeatureContent({ feature }: { feature: Feature }) {
   }
 }
 
-function RealtimeFeature({ feature }: { feature: Feature }) {
+function RealtimeFeature() {
   return <LiveGlobeCard />;
 }
 
@@ -100,7 +99,7 @@ function PrivacyFeature({ feature: { title, desc } }: { feature: Feature }) {
     <div className="relative overflow-hidden w-full h-full min-h-[300px] flex flex-col justify-between">
       {/* Top Right Badge */}
       <div className="absolute top-0 right-0 z-20">
-        <span className="inline-flex items-center rounded-full border border-[#e8e6e5] dark:border-zinc-800 bg-[#f5f5f4] dark:bg-zinc-900/90 px-3 py-1 text-xs sm:text-[13px] font-mono text-[#78716c] dark:text-zinc-300 font-normal shadow-sm">
+        <span className="inline-flex items-center rounded-full border border-[#e8e6e5] dark:border-zinc-800 bg-[#f5f5f4] dark:bg-zinc-900/90 px-3 py-1 text-xs sm:text-[13px] font-sans text-[#78716c] dark:text-zinc-300 font-normal shadow-sm">
           no setup required
         </span>
       </div>

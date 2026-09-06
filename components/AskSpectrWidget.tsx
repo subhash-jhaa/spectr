@@ -200,13 +200,18 @@ export function AskSpectrWidget() {
       };
 
       setMessages((prev) => [...prev, botMessage]);
-    } catch (err: any) {
+    } catch (err: unknown) {
+      const errMessage =
+        err instanceof Error
+          ? err.message
+          : typeof err === "string"
+          ? err
+          : "Sorry, I couldn't reach the Ask Spectr service. Please make sure the spectr-ai backend is running.";
+
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: "assistant",
-        text:
-          err.message ||
-          "Sorry, I couldn't reach the Ask Spectr service. Please make sure the spectr-ai backend is running.",
+        text: errMessage,
         error: true,
       };
 

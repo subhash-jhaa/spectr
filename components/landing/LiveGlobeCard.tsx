@@ -125,7 +125,7 @@ export function LiveGlobeCard() {
     <div className="relative overflow-hidden w-full h-full min-h-[320px] sm:min-h-[360px] flex flex-col justify-between">
       {/* Top Right Badge */}
       <div className="absolute top-0 right-0 z-20">
-        <span className="inline-flex items-center rounded-full border border-[#e8e6e5] dark:border-zinc-800 bg-[#f5f5f4] dark:bg-zinc-900/90 px-3 py-1 text-xs sm:text-[13px] font-mono text-[#78716c] dark:text-zinc-300 font-normal shadow-sm">
+        <span className="inline-flex items-center rounded-full border border-[#e8e6e5] dark:border-zinc-800 bg-[#f5f5f4] dark:bg-zinc-900/90 px-3 py-1 text-xs sm:text-[13px] font-sans text-[#78716c] dark:text-zinc-300 font-normal shadow-sm">
           no setup required
         </span>
       </div>
