@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Inter_Tight, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
-
+import { AskSpectrWidget } from "@/components/AskSpectrWidget";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -130,6 +130,7 @@ export default function RootLayout({
       >
         <Providers>
           {children}
+          <AskSpectrWidget />
         </Providers>
       </body>
     </html>
