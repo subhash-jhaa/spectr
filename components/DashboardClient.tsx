@@ -18,11 +18,8 @@ import {
   ArrowLeftIcon,
   Squares2X2Icon,
   DocumentTextIcon,
-  ExclamationTriangleIcon,
-  TrashIcon,
   CheckIcon,
   DocumentDuplicateIcon,
-  AdjustmentsHorizontalIcon,
 } from '@heroicons/react/24/outline'
 import { LogoMark } from './landing/Logo'
 import { Dashboard } from '@/components/dashboard/dashboard'
@@ -663,7 +660,7 @@ const DashboardClient = ({ initialProjectId, initialProjects }: DashboardClientP
                           await navigator.clipboard.writeText(selectedProject.id)
                           setHasCopiedConfigId(true)
                           setTimeout(() => setHasCopiedConfigId(false), 1800)
-                        } catch (e) {}
+                        } catch {}
                       }}
                       title="Click to copy Project ID"
                       className="group inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#fafaf9] dark:bg-zinc-900/80 border border-[#e8e6e5] dark:border-zinc-800 text-xs font-mono text-[#0c0a09] dark:text-zinc-200 hover:border-[#3ba6f1]/50 transition-all cursor-pointer w-fit"

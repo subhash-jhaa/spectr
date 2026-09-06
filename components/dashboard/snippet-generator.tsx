@@ -4,10 +4,7 @@ import React, { useState } from 'react'
 import {
   CheckIcon,
   DocumentDuplicateIcon,
-  SparklesIcon,
-  SignalIcon,
   GlobeAltIcon,
-  CodeBracketIcon
 } from '@heroicons/react/24/outline'
 
 interface SnippetGeneratorProps {

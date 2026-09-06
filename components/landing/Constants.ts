@@ -1,6 +1,9 @@
 import {
-  Eye, BarChart3, Code2, Cpu, ShieldCheck, Plug,
-  Globe, Zap, Activity, MousePointerClick,
+  ShieldCheck,
+  Globe,
+  Zap,
+  Activity,
+  MousePointerClick,
 } from 'lucide-react';
 
 export const VISITORS = [

@@ -6,7 +6,6 @@ import { cn, SectionLabel, fadeUp } from './Primitives';
 import { FEATURES } from './Constants';
 import { LiveGlobeCard } from './LiveGlobeCard';
 import { CobeGlobe } from '@/components/cobe-globe';
-import { Check } from 'lucide-react';
 
 export function Features() {
   return (
@@ -83,7 +82,7 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
 
 function FeatureContent({ feature }: { feature: Feature }) {
   switch (feature.variant) {
-    case 'realtime': return <RealtimeFeature feature={feature} />;
+    case 'realtime': return <RealtimeFeature />;
     case 'privacy': return <PrivacyFeature feature={feature} />;
     case 'dashboard': return <DashboardFeature feature={feature} />;
     case 'presence': return <PresenceFeature feature={feature} />;
@@ -91,7 +90,7 @@ function FeatureContent({ feature }: { feature: Feature }) {
   }
 }
 
-function RealtimeFeature({ feature }: { feature: Feature }) {
+function RealtimeFeature() {
   return <LiveGlobeCard />;
 }
 
