@@ -107,18 +107,11 @@ export async function POST(req: NextRequest) {
         { error: `Spectr AI service returned status ${response.status} with empty response.` },
         { status: response.status }
       );
-<<<<<<< HEAD
     } catch (err: unknown) {
       clearTimeout(timeoutId);
 
       const isAbort = (err as { name?: string })?.name === "AbortError";
       if (isAbort) {
-=======
-    } catch (err: any) {
-      clearTimeout(timeoutId);
-
-      if (err.name === "AbortError") {
->>>>>>> 7c5f676003c460120c7f98a9248a6a532b11c555
         return NextResponse.json(
           { error: "Ask Spectr AI service timed out (30s limit). Please try again." },
           { status: 504 }
@@ -132,11 +125,7 @@ export async function POST(req: NextRequest) {
         { status: 503 }
       );
     }
-<<<<<<< HEAD
   } catch (error: unknown) {
-=======
-  } catch (error: any) {
->>>>>>> 7c5f676003c460120c7f98a9248a6a532b11c555
     console.error("Ask API route error:", error);
     return NextResponse.json(
       { error: "Internal server error." },
