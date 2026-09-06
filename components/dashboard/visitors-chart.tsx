@@ -89,12 +89,12 @@ export function VisitorsChart({
 
   let displayTitle = "Unique Visitors";
   let displayDescription = "Total visitors in the last 7 days";
-  let displayValue = formatInteger(totalVisitors);
+  let displayValue = currentOverviewItem ? formatInteger(currentOverviewItem.current) : formatInteger(totalVisitors);
 
   if (activeMetric === 'pageViews') {
     displayTitle = "Total Page Views";
     displayDescription = "Total page views in the last 7 days";
-    displayValue = formatInteger(totalPageViews);
+    displayValue = currentOverviewItem ? formatInteger(currentOverviewItem.current) : formatInteger(totalPageViews);
   } else if (activeMetric === 'bounceRate') {
     displayTitle = "Average Bounce Rate";
     displayDescription = "Average single-page session ratio in the last 7 days";

@@ -106,3 +106,15 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+model AskQueryLog {
+  id           String   @id @default(cuid())
+  siteId       String
+  question     String
+  templateUsed String?
+  pathTaken    String   // "rag_only" | "query_only" | "both" | "neither"
+  answer       String   @db.Text
+  createdAt    DateTime @default(now())
+
+  @@index([siteId, createdAt])
+}
